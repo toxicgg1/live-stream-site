@@ -16,7 +16,7 @@ body {
   text-align: center;
 }
 
-/* 🔥 BACKGROUND ANIMATION */
+/* BACKGROUND ANIMATION */
 @keyframes gradientBG {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
@@ -31,8 +31,6 @@ header {
   gap: 10px;
   padding: 15px;
   background: rgba(0,0,0,0.6);
-
-  /* 🔥 ADDED GLOW */
   border-bottom: 2px solid rgba(255,215,0,0.3);
   box-shadow: 0 0 15px rgba(255,215,0,0.5);
 }
@@ -41,16 +39,21 @@ header img {
   height: 45px;
 }
 
-/* MATCH CARD */
+/* MATCH CARD (GLASS EFFECT ADDED) */
 .match-card {
   margin: 25px;
   padding: 25px;
   border-radius: 20px;
   background: #111;
   box-shadow: 0 0 20px red;
+
+  /* NEW ADD */
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.1);
 }
 
-/* 🔥 HOVER EFFECT */
+/* HOVER */
 .match-card:hover {
   transform: scale(1.03);
   transition: 0.3s;
@@ -70,6 +73,13 @@ header img {
   background: black;
   padding: 5px;
   border-radius: 10px;
+  transition: 0.3s;
+}
+
+/* LOGO GLOW */
+.team-logos img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px gold;
 }
 
 /* TEXT */
@@ -78,7 +88,6 @@ header img {
   font-weight: bold;
 }
 
-/* 🔥 LIVE IMPROVED */
 .live {
   color: red;
   font-weight: bold;
@@ -90,7 +99,7 @@ header img {
   50% { opacity: 0.3; }
 }
 
-/* 🔥 BUTTON UPGRADE */
+/* BUTTON */
 .btn {
   padding: 12px 25px;
   background: linear-gradient(45deg, red, orange);
@@ -102,6 +111,12 @@ header img {
   cursor: pointer;
   animation: pulse 1.5s infinite;
   box-shadow: 0 0 15px rgba(255,0,0,0.7);
+}
+
+/* BUTTON HOVER BLAST */
+.btn:hover {
+  transform: scale(1.12);
+  box-shadow: 0 0 25px orange, 0 0 40px red;
 }
 
 @keyframes pulse {
