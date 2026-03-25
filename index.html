@@ -9,9 +9,18 @@
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(135deg, #0b1c3d, #1b263b, #000);
+  background: linear-gradient(-45deg, #0b1c3d, #1b263b, #000, #142850);
+  background-size: 400% 400%;
+  animation: gradientBG 12s ease infinite;
   color: white;
   text-align: center;
+}
+
+/* 🔥 SMOOTH BACKGROUND ANIMATION */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 /* HEADER */
@@ -122,14 +131,12 @@ iframe {
 <body>
 
 <header>
-  <!-- ✅ IPL LOGO -->
   <img src="ipl.png">
   <h1 style="color: gold;">IPL Live Streaming</h1>
 </header>
 
 <div class="match-card">
 
-  <!-- ✅ TEAM LOGOS -->
   <div class="team-logos">
     <img src="rcb.jpg">
     <img src="srh.jpg">
