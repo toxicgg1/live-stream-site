@@ -1,154 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>RCB vs SRH Live</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>IPL Live Hub</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(135deg, #000000, #1c1c1c);
-  color: white;
-  text-align: center;
-}
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+      transition: all 0.3s ease;
+    }
 
-.container {
-  padding: 20px;
-}
+    body {
+      background: linear-gradient(135deg, #0b1c3d, #142850);
+      color: white;
+    }
 
-/* LOGO FIX */
-.logo {
-  font-size: 28px;
-  font-weight: bold;
-  color: #00e5ff;
-  margin-top: 10px;
-}
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 30px;
+      background: rgba(0,0,0,0.3);
+      backdrop-filter: blur(10px);
+    }
 
-h1 {
-  font-size: 26px;
-  margin: 10px 0;
-}
+    header img {
+      height: 50px;
+    }
 
-#timer {
-  font-size: 18px;
-  color: #ffd700;
-  margin-bottom: 20px;
-}
+    header h1 {
+      font-size: 22px;
+      color: gold;
+    }
 
-.btn {
-  padding: 14px 28px;
-  background: linear-gradient(45deg, #ff0000, #ff7300);
-  border: none;
-  border-radius: 10px;
-  color: white;
-  font-size: 18px;
-  cursor: pointer;
-  box-shadow: 0 0 15px rgba(255,0,0,0.5);
-  transition: 0.3s;
-}
+    .hero {
+      text-align: center;
+      padding: 50px 20px;
+    }
 
-.btn:hover {
-  transform: scale(1.08);
-}
+    .hero h2 {
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
 
-#player {
-  display: none;
-  margin-top: 20px;
-}
+    .hero p {
+      opacity: 0.8;
+    }
 
-iframe {
-  width: 95%;
-  height: 320px;
-  border-radius: 12px;
-  border: none;
-}
+    .btn {
+      margin-top: 20px;
+      padding: 12px 25px;
+      background: gold;
+      color: black;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+    }
 
-/* POPUP */
-#popup {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.95);
-  display: none;
-  justify-content: center;
-  align-items: center;
-}
+    .btn:hover {
+      transform: scale(1.1);
+    }
 
-.popup-box {
-  background: #111;
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 0 20px rgba(255,0,0,0.4);
-}
-</style>
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 30px;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(8px);
+      padding: 20px;
+      border-radius: 15px;
+      border-left: 5px solid gold;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      opacity: 0.7;
+    }
+  </style>
 </head>
 
 <body>
 
-<div class="container">
+<header>
+  <!-- ✅ FIXED LOGO -->
+  <img src="https://upload.wikimedia.org/wikipedia/en/2/25/Indian_Premier_League_Logo.svg" alt="IPL Logo">
+  <h1>IPL Live Hub</h1>
+</header>
 
-  <!-- LOGO TEXT (no error now) -->
-  <div class="logo">🏏 IPL LIVE</div>
+<section class="hero">
+  <h2>🏏 Welcome to IPL Live Updates</h2>
+  <p>Get fastest scores, updates & news instantly</p>
 
-  <h1>🔥 RCB vs SRH Live Match</h1>
+  <!-- ✅ UPDATED TELEGRAM LINK -->
+  <a href="https://t.me/Boundarybreakers1" target="_blank" class="btn">
+    Join Telegram 🚀
+  </a>
+</section>
 
-  <div id="timer">Match starting soon...</div>
-
-  <button class="btn" onclick="openPopup()">▶ Watch Live</button>
-
-  <div id="player">
-    <h2>LIVE 🔴</h2>
-    <iframe src="https://www.youtube.com/embed/live_stream?channel=UC4R8DWoMoI7CAwX8_LjQHig"></iframe>
+<section class="cards">
+  <div class="card">
+    <h3>📊 Live Scores</h3>
+    <p>Check real-time IPL match scores</p>
   </div>
 
-</div>
-
-<!-- TELEGRAM -->
-<div id="popup">
-  <div class="popup-box">
-    <h2>Join Telegram to Watch</h2>
-    <a href="https://t.me/sportsyaariii" target="_blank">
-      <button class="btn">Join Channel</button>
-    </a>
-    <br><br>
-    <button class="btn" onclick="unlock()">I Joined</button>
+  <div class="card">
+    <h3>🔥 Match Updates</h3>
+    <p>Ball-by-ball updates instantly</p>
   </div>
-</div>
 
-<script>
-function openPopup() {
-  document.getElementById("popup").style.display = "flex";
-}
+  <div class="card">
+    <h3>📰 Latest News</h3>
+    <p>All IPL breaking news in one place</p>
+  </div>
 
-function unlock() {
-  document.getElementById("popup").style.display = "none";
-  document.getElementById("player").style.display = "block";
-}
+  <div class="card">
+    <h3>🏆 Points Table</h3>
+    <p>Updated standings of IPL teams</p>
+  </div>
+</section>
 
-// TIMER
-var countDownDate = new Date("March 30, 2026 19:30:00").getTime();
-
-var x = setInterval(function() {
-  var now = new Date().getTime();
-  var distance = countDownDate - now;
-
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-  document.getElementById("timer").innerHTML =
-    "Starts in: " + hours + "h " + minutes + "m " + seconds + "s ";
-
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("timer").innerHTML = "Match LIVE 🔴";
-  }
-}, 1000);
-</script>
+<footer>
+  <p>© 2026 IPL Live Hub | Made with ❤️</p>
+</footer>
 
 </body>
 </html>
