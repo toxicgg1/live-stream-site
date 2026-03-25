@@ -2,53 +2,29 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>IPL Live Hub</title>
+  <title>IPL Live Updates</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
-      transition: all 0.3s ease;
-    }
-
     body {
-      background: linear-gradient(135deg, #0b1c3d, #142850);
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #0b1c3d;
       color: white;
+      text-align: center;
     }
 
     header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 15px 30px;
-      background: rgba(0,0,0,0.3);
-      backdrop-filter: blur(10px);
+      background-color: #142850;
+      padding: 15px;
     }
 
     header img {
       height: 50px;
     }
 
-    header h1 {
-      font-size: 22px;
+    h1 {
       color: gold;
-    }
-
-    .hero {
-      text-align: center;
-      padding: 50px 20px;
-    }
-
-    .hero h2 {
-      font-size: 28px;
-      margin-bottom: 15px;
-    }
-
-    .hero p {
-      opacity: 0.8;
     }
 
     .btn {
@@ -56,39 +32,21 @@
       padding: 12px 25px;
       background: gold;
       color: black;
-      border-radius: 30px;
+      border-radius: 25px;
       text-decoration: none;
-      font-weight: bold;
       display: inline-block;
+      font-weight: bold;
     }
 
-    .btn:hover {
-      transform: scale(1.1);
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      padding: 30px;
-    }
-
-    .card {
-      background: rgba(255,255,255,0.1);
-      backdrop-filter: blur(8px);
+    .container {
       padding: 20px;
-      border-radius: 15px;
-      border-left: 5px solid gold;
     }
 
-    .card:hover {
-      transform: translateY(-8px);
-    }
-
-    footer {
-      text-align: center;
+    .box {
+      background: #1f4068;
+      margin: 15px;
       padding: 20px;
-      opacity: 0.7;
+      border-radius: 10px;
     }
   </style>
 </head>
@@ -96,46 +54,36 @@
 <body>
 
 <header>
-  <!-- ✅ FIXED LOGO -->
+  <!-- ✅ Working IPL Logo -->
   <img src="https://upload.wikimedia.org/wikipedia/en/2/25/Indian_Premier_League_Logo.svg" alt="IPL Logo">
-  <h1>IPL Live Hub</h1>
+  <h1>IPL Live Updates</h1>
 </header>
 
-<section class="hero">
-  <h2>🏏 Welcome to IPL Live Updates</h2>
-  <p>Get fastest scores, updates & news instantly</p>
+<div class="container">
+  <h2>Welcome to IPL Hub 🏏</h2>
+  <p>Get latest updates, scores and news instantly</p>
 
   <!-- ✅ UPDATED TELEGRAM LINK -->
   <a href="https://t.me/Boundarybreakers1" target="_blank" class="btn">
     Join Telegram 🚀
   </a>
-</section>
 
-<section class="cards">
-  <div class="card">
+  <div class="box">
     <h3>📊 Live Scores</h3>
-    <p>Check real-time IPL match scores</p>
+    <p>Check live match scores</p>
   </div>
 
-  <div class="card">
+  <div class="box">
     <h3>🔥 Match Updates</h3>
-    <p>Ball-by-ball updates instantly</p>
+    <p>Ball-by-ball updates</p>
   </div>
 
-  <div class="card">
+  <div class="box">
     <h3>📰 Latest News</h3>
-    <p>All IPL breaking news in one place</p>
+    <p>All IPL news in one place</p>
   </div>
 
-  <div class="card">
-    <h3>🏆 Points Table</h3>
-    <p>Updated standings of IPL teams</p>
-  </div>
-</section>
-
-<footer>
-  <p>© 2026 IPL Live Hub | Made with ❤️</p>
-</footer>
+</div>
 
 </body>
 </html>
